@@ -134,13 +134,17 @@ def place(place_id, session_token=None, fields=None, language="English"):
     return ret.json()
 
 
-query = "nearest eye doctor available"
-# output = find_place("hospital", "textquery", None, "point:23.420386, 85.434566")
-output = find_place(query, "textquery", None, "ipbias")
-# print(output)
-# print(output['candidates'])
-result = place(output['candidates'][0]['place_id'])
-print(result)
-print(result['result']['name'])
-print(result['result']['formatted_address'])
-print(result['result']['formatted_phone_number'])
+def getReply(query):
+    # query = "nearest eye doctor available"
+    # output = find_place("hospital", "textquery", None, "point:23.420386, 85.434566")
+    output = find_place(query, "textquery", None, "ipbias")
+    # print(output)
+    # print(output['candidates'])
+    result = place(output['candidates'][0]['place_id'])
+
+    return result, result['result']['name'], result['result']['formatted_address'], result['result']['formatted_phone_number']
+
+    # print(result)
+    # print(result['result']['name'])
+    # print(result['result']['formatted_address'])
+    # print(result['result']['formatted_phone_number'])
