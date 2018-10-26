@@ -1,8 +1,16 @@
 import pandas as pd
 import pickle
 
-symptom_disease_list = []
+symptom_list = []
 
-with open('../datasets/SymptomAndDiseasesList.pickle', 'rb') as f:
-    symptom_disease_list = pickle.load(f)
+
+data = pd.read_csv('DeepMinds\datasets\Training.csv')
+disease_list = set(data['prognosis'])
+disease_symptom_dictionary = {}
+
+for index,row in data.iterrows():
     
+    temp = row[row==1].index
+    for j in temp:
+        disease_symptom_dictionary[row['prognosis']].add(j)
+
