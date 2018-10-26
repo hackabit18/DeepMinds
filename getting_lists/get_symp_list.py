@@ -13,6 +13,8 @@ ndata = open('C:\\Users\\Rishabh\\Desktop\\HackABIT\\DeepMinds\\getting_lists\\S
 for i in range(0,132):
     ndata.write('"'+symps_list_r[i]+'","'+symps_list_r[i]+'"')
     ndata.write('\n')
+    words = symps_list_r[i].split('_')
+    symps_list_r[i] = ' '.join(words)
     nd.write(symps_list_r[i])
     nd.write('\n')
 ndata.close()
