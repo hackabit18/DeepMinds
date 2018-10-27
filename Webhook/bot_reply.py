@@ -163,12 +163,31 @@ def getReply(query):
     # query = "nearest eye doctor available"
     # output = find_place("hospital", "textquery", None, "point:23.420386, 85.434566")
     output = find_place(query, "textquery", None, "ipbias")
-    # print(output)
-    # print(output['candidates'])
-    result = place(output['candidates'][0]['place_id'])
+    print(query)
+    print(output['status'])
+    if output['status'] != 'OK':
+        return "Sorry for the inconvenience, but we could not find a place matching your search."
 
-    return result, result['result']['name'], result['result']['formatted_address']#, result['result'][
-        #'formatted_phone_number']
+    # print(output)
+    result = place(output['candidates'][0]['place_id'])
+    print(result)
+
+    if 'result' not in result:
+        return "Sorry for the inconvenience, but we could not find a place matching your search."
+
+    s = ''
+    if 'name' in result['result']:
+        s = s + result['result']['name'] + ' '
+    if 'formatted_address' in result['result']:
+        s = s + result['result']['formatted_address'] + ' '
+    if 'formatted_phone_number' in result['result']:
+        s = s + result['result']['formatted_phone_number'] + ' '
+
+    if s == '':
+        s = "Sorry for the inconvenience, but we could not find a place matching your search."
+    else:
+        s = "The closest " + query + " to you is the " + s
+    return s
 
     # print(result)
     # print(result['result']['name'])
@@ -312,6 +331,10 @@ class DiffSessions:
 
     def ask_question(self):
         # global self.current_disease_list, self.current_symptoms_yes, self.current_symptoms_no, symp
+        if len(self.current_symptoms_no) >= self.thres:
+            return "exit", "I'm sorry, but I am not able to make a prediction of the disease you may be " \
+                               "having at the moment."
+        sentence_formats = ["Do you think you have ", "Do you feel you have", "Do you feel ", "Do you think "]
         x = len(self.current_symptoms_yes)
         while x < self.thres:
             for i in self.current_disease_list:
@@ -327,6 +350,9 @@ class DiffSessions:
                         return j, ask
 
         else:
+            if len(self.current_symptoms_no) >= self.thres-2:
+                return "not_able", "I'm sorry, but I am not able to make a prediction of the disease you may be " \
+                                   "having at the moment. "
             current_disease_list_local = []
             self.c = 0
             # dise =
@@ -352,7 +378,7 @@ class DiffSessions:
                 self.c += 1
                 if self.c == 1:
                     break
-            return "done", "You maybe suffering from " + current_disease_list_local[0] + "."
+            return "exit", "You maybe suffering from " + current_disease_list_local[0] + "."
 
             # receive =
 
@@ -373,8 +399,8 @@ def result():
     print(data)
 
     if 'venue-medical-type' in data['queryResult']['parameters']:
-        _, x, y = getReply(data['queryResult']['parameters']['venue-medical-type'])
-        reply = x + " " + y # + " " + z
+        reply = getReply(data['queryResult']['parameters']['venue-medical-type'])
+
 
 
     # print(current_symptoms_yes)
@@ -396,12 +422,15 @@ def result():
 
         print(len(object_list))
         print(len(object_dict))
+        print(exit_or_not == "exit")
 
         if exit_or_not == "exit":
             object_dict[obj_name] = iterator
             iterator += 1
+            object_list.append(DiffSessions())
 
     reply = reply.replace("_", " ")
+    reply = reply.replace("GERD", "Acid reflux")
     dictionary = {'fulfillmentText': reply}
     # print(data['queryResult']['outputContexts']['lifespanCount'])
     # dictionary['outputContexts'] = data['queryResult']['outputContexts']
