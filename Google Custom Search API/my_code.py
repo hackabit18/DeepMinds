@@ -10,7 +10,7 @@
 from googleapiclient.discovery import build
 
 # query - take output of DialogFlow
-query = 'Narendra Modi'
+query = 'Medicines for Typhoid'
 service = build("customsearch", "v1",
             developerKey="AIzaSyDPg23pWoQC6bzMh0g5P37XUKyPdih_jXI")
 
