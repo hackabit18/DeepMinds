@@ -22,5 +22,6 @@ res = service.cse().list(    # pylint: disable=no-member
 # print(len(res.items()))
 # print(len(res['items']))
 print('The top results from web are: ')
-for i in range(0,len(res['items'])):
+no_of_results = 3
+for i in range(0,no_of_results):
     print(res['items'][i]['link'])

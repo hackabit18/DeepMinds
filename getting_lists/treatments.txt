@@ -1,6 +1,6 @@
 Acne - Treatments include over-the-counter creams and cleanser, as well as prescription antibiotics.
 Hypertension - Eating a healthier diet with less salt, exercising regularly and taking medication can help lower blood pressure.
-Jaundice - 
+Jaundice - Jaundice treatment targets the cause rather than the jaundice symptoms. Anemia-induced jaundice may be treated by boosting the amount of iron in the blood and Hepatitis-induced jaundice requires antiviral or steroid medications.
 AIDS - No cure exists for AIDS, but strict adherence to antiretroviral regimens (ARVs) can dramatically slow the disease's progress as well as prevent secondary infections and complications.
 Alcoholic hepatitis - Treatment involves hydration, nutritional care and stopping alcohol use. Steroid drugs can help reduce liver inflammation.
 hepatitis A - The condition clears up on its own in one or two months. Rest and adequate hydration can help
@@ -26,15 +26,15 @@ Peptic ulcer diseae - Treatment usually includes medication to decrease stomach 
 Migraine - Preventive and pain-relieving medication can help manage migraine headaches.
 Arthritis - Medication, physiotherapy or sometimes surgery helps reduce symptoms and improve quality of life.
 Typhoid - Treatment includes antibiotics and fluids.
-Hypothyroidism - 
-Varicose veins - 
+Hypothyroidism - Standard treatment for hypothyroidism involves daily use of the synthetic thyroid hormone levothyroxine (Levothroid, Synthroid, others). This oral medication restores adequate hormone levels, reversing the signs and symptoms of hypothyroidism.
+Varicose veins - Treatment may be required to reduce pain or discomfort, address complications, such as leg ulcers, skin discoloration, or swelling.
 Urinary tract infection - Common treatment is with antibiotics.
 Bronchial Asthma - Asthma can usually be managed with rescue inhalers to treat symptoms (salbutamol) and controller inhalers that prevent symptoms (steroids). Severe cases may require longer-acting inhalers that keep the airways open (formoterol, salmeterol, tiotropium), as well as inhalant steroids.
 Hepatitis C - Hepatitis C is treated with antiviral medication. In some people, newer medicines can eradicate the virus.
 Paralysis (brain hemorrhage) - Emergency treatment is required for cerebral haemorrhage. It usually involves medication and close monitoring in an intensive care unit. In rare cases, surgery may be required to relieve pressure around the brain.
 Chicken pox - Chickenpox can be prevented by a vaccine. Treatment usually involves relieving symptoms, although high-risk groups may receive antiviral medication.
 Pneumonia - Antibiotics can treat many forms of pneumonia. Some forms of pneumonia can be prevented by vaccines.
-Drug Reaction - 
+Drug Reaction - The following interventions may be used to treat an allergic reaction to a drug: Withdrawal of the drug, Antihistamines, Corticosteroids and Treatment of anaphylaxis.
 Dengue - Treatment includes fluids and pain relievers. Severe cases require hospital care.
 Hepatitis D - There are few treatments specifically for hepatitis D, although different regimes may be tried. Management also focuses on supportive care.
 Cervical spondylosis - In many cases, no specific treatment is required. If symptoms occur, treatments include medication, corticosteroid injections, physiotherapy and sometimes surgery.
